@@ -5,17 +5,14 @@ def get_career_suggestion(answers):
     Calculates scores for four primary career domains based on user input.
     Returns the top suggested category and the score breakdown.
     """
-    # Initialize scores for the four main categories
+
     scores = {
-        'Technical': 0,      # Focused on building, systems, and engineering
-        'Analytical': 0,     # Focused on data, research, logic, and strategy
-        'Creative': 0,       # Focused on design, content, and aesthetics
-        'People-Oriented': 0 # Focused on interaction, teaching, and service
+        'Technical': 0,      
+        'Analytical': 0,     
+        'Creative': 0,       
+        'People-Oriented': 0 
     }
 
-    # --- Scoring Logic based on Questions ---
-
-    # Q1: Problem Solving Style
     q1_map = {
         'A': ('Technical', 3, 'Creative', 1),
         'B': ('Analytical', 3, 'Technical', 1),
@@ -26,7 +23,6 @@ def get_career_suggestion(answers):
         scores[cat1] += val1
         scores[cat2] += val2
 
-    # Q2: Preferred Work Environment
     q2_map = {
         'A': ('Technical', 2, 'Analytical', 2),
         'B': ('People-Oriented', 4),
@@ -40,7 +36,6 @@ def get_career_suggestion(answers):
             scores[cat1] += val1
             scores[cat2] += val2
 
-    # Q3: Primary Interest
     q3_map = {
         'A': ('Creative', 4),
         'B': ('Technical', 3, 'Analytical', 1),
@@ -54,7 +49,6 @@ def get_career_suggestion(answers):
             scores[cat1] += val1
             scores[cat2] += val2
 
-    # Q4: Motivation/Excitement
     q4_map = {
         'A': ('Technical', 2),
         'B': ('Analytical', 2),
@@ -65,11 +59,9 @@ def get_career_suggestion(answers):
         cat, val = q4_map[answers['q4']]
         scores[cat] += val
 
-    # Get the highest score and the corresponding category
     max_score = max(scores.values())
     top_categories = [k for k, v in scores.items() if v == max_score]
 
-    # Map the top category to a suggestion
     suggestions = {
         'Technical': {
             'title': 'The Builder Path: Technical & Engineering',
@@ -173,7 +165,6 @@ def run_quiz():
 
     suggestion, scores, top_categories = get_career_suggestion(answers)
 
-    # --- Print Results ---
     print("\n🎉 Your Suggested Path:")
     print(f"   >>> {suggestion['title']} <<<")
     print(f"   Summary: {suggestion['summary']}")
@@ -183,17 +174,15 @@ def run_quiz():
     for career in suggestion['careers']:
         print(f"  - {career}")
         
-    # Handle ties
     if len(top_categories) > 1:
         print("\n*Note: It was a close call! You show strong interest in multiple areas, including: " + ", ".join(top_categories) + ".*")
 
-    # Score Breakdown
     print("\n📊 Your Interest Breakdown:")
-    # Sort scores for clean display
+   
     sorted_scores = sorted(scores.items(), key=lambda item: item[1], reverse=True)
     
     for domain, score in sorted_scores:
-        # Use a simple bar visualization
+      
         bar = '█' * score
         print(f"  {domain:<15}: {score:2} |{bar}")
         
