@@ -79,7 +79,7 @@ career-navigator/
 
 2. Download or clone this repository:
 
-git clone https://github.com/your-username/career-navigator.git
+git clone https://github.com/piya25bai10213/career-navigator.git
 
 
 3. Open the project folder.
