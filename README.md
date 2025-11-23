@@ -3,8 +3,7 @@ Career Navigator
 Career Navigator is a simple and interactive Python-based project that helps users discover potential career paths based on their preferences, interests, strengths, and working style. It provides personalized career suggestions and a visual progress bar that shows your interest level across different fields.
 
 
-
-🔍 About the Project
+About the Project
 
 This project asks a series of questions such as:
 
@@ -24,7 +23,7 @@ Based on your answers, the program analyses your responses and suggests possible
 
 ---
 
-🌟 Features
+ Features
 
 Interactive Q&A system: User-friendly questions to understand your preferences.
 
@@ -39,7 +38,7 @@ Beginner Friendly Code: Simple structure and logic.
 
 
 
-🛠️ Technologies Used
+ Technologies Used
 
 Programming Language: Python
 
@@ -62,7 +61,7 @@ How It Works
 
 
 
-📂 Project Structure
+ Project Structure
 
 career-navigator/
 │
@@ -72,7 +71,7 @@ career-navigator/
 
 
 
-▶️ How to Run the Project
+How to Run the Project
 
 1. Install Python on your system.
 
@@ -90,7 +89,7 @@ git clone https://github.com/piya25bai10213/career-navigator.git
 python main.py
 
 
- 📈 Example Output
+  Example Output
 
 Your top career fields:
 - Technology: ████████░░ 80%
@@ -104,7 +103,7 @@ Suggested Careers:
 
 
 
-👩‍💻 Future Enhancements
+ Future Enhancements
 
 Add GUI using Tkinter or PyQt
 
